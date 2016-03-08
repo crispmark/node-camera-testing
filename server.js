@@ -15,19 +15,8 @@ io.on('connection', function(socket){
   console.log('a user connected');
 
   socket.on('image', function(msg) {
-    console.log('got buffer');
-    try{
-      var buff = msg.buffer;
-      cv.readImage(buff, function(err, im) {
-        console.log(im.size());
-        if (im.size()[0] > 0 && im.size()[1] > 0){
-          window.show(im);
-          window.blockingWaitKey(0, 50);
-        }
-      })
-    } catch (e) {
-
-    }
+    console.log('frame received');
+    io.emit('image', msg);
   });
 
   socket.on('disconnect', function(){

@@ -12,13 +12,12 @@ try {
     camera.read(function(err, im) {
       if (err) throw err;
       if (im.size()[0] > 0 && im.size()[1] > 0){
-        console.log(im.size());
         var buff = im.toBuffer();
         var msg = {image: true, buffer: buff};
         socket.emit('image', msg);
       }
     });
-  }, 100);
+  }, 200);
 
 } catch (e) {
   console.log("Couldn't start camera:", e)
