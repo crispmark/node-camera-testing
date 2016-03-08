@@ -1,0 +1,22 @@
+{
+  "name": "node-camera-testing",
+  "version": "1.0.0",
+  "description": "testing node-camera functionality",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crispmark/node-camera-testing.git"
+  },
+  "author": "Mark Crisp <macr1324@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crispmark/node-camera-testing/issues"
+  },
+  "homepage": "https://github.com/crispmark/node-camera-testing#readme",
+  "dependencies": {
+    "opencv": "^5.0.0"
+  }
+}
